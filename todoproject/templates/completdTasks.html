@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block title %}All Todo's{% endblock %}
+{% block content %}
+{% for eachtodo in alltodo %}
+  {% if eachtodo.complete %}
+<div class="row">
+    <div class="col-md-6" style="margin:0 auto;">
+        <div class="card container-fluid" style="margin-top: 1rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{eachtodo.title}} {{eachtodo.priority}}</h5>
+              <p class="card-text">{{eachtodo.description}}</p>
+              <p class="card-text">{{eachtodo.created_at}}</p>
+              
+
+              
+
+
+            </div>
+          </div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+{% endblock %}
